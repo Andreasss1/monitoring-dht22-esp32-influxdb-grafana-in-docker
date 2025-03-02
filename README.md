@@ -52,6 +52,43 @@
 
 ---
 
+## 📖 Setup Steps
+
+### 1. Required Components
+- ESP32 Board
+- DHT22 Sensor
+- Docker Desktop
+- Arduino IDE
+### 2. Setup InfluxDB and Grafana in Docker
+#### InfluxDB: 
+docker run -d --name=influxdb -p 8086:8086 influxdb/influxdb
+- Open InfluxDB at: htt://localhost:8086
+- Default login: Username: admin / Password: admin123
+#### Grafana: 
+docker run -d --name=grafana -p 3000:3000 grafana/grafana
+- Open Grafana at: http://localhost:3000
+- Default login: Username: admin / Password: admin
+### 3. Configure Data Source in Grafana
+- Data Source Type: InfluxDB
+- URL: http://influxdb:8086
+- Organization: your_org
+- Bucket: your_bucket
+- Token: your_secret_token
+### 4. Connect ESP32 to WiFi and InfluxDB
+- Create DHT22 monitoring code on ESP32
+- Configure *WiFi SSID* and *Password* in ESP32 code.
+- Configure InfluxDB settings in ESP32 code, including:
+    - *InfluxDB URL* (your Docker host machine IP or `http://your-ip:8086`)
+    - *Bucket Name*
+    - *Organization Name*
+    - *API Token*
+- Upload code to ESP32
+### 5. Connect InfluxDB and Grafana
+- Configure InfluxDB setting in Grafana Data Source (url, bucket, org, token)
+- In the dashboard, create a query to display a data graph
+
+---
+
 ## 📊 Simple Dashboard Preview
 ### 1️⃣ InfluxDB Chart Preview
 
