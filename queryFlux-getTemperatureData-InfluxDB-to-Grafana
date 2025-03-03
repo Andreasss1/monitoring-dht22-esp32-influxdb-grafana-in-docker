@@ -1,0 +1,4 @@
+from(bucket: "monitoring-dht22")
+  |> range(start: -1h)
+  |> filter(fn: (r) => r._measurement == "data_dht22"
+  |> filter(fn: (r) => r._field == "temperature"
