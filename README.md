@@ -5,6 +5,7 @@
 ---
 
 ## 💻 System Architecture
+![system-architecture](https://github.com/Andreasss1/monitoring-dht22-esp32-influxdb-grafana-in-docker/blob/main/System-Architecture-Monitoring-DHT22-%20ESP32-InfluxDB-Grafana.png)
 
 ---
 
@@ -91,8 +92,12 @@ docker run -d --name=grafana -p 3000:3000 grafana/grafana
 
 ## 📊 Simple Dashboard Preview
 ### 1️⃣ InfluxDB Chart Preview
-
+#### InfluxDB Data Explorer:
+![influxDBdataExplorer](https://github.com/Andreasss1/monitoring-dht22-esp32-influxdb-grafana-in-docker/blob/main/dataExplorer-InfluxDB.png)
+#### InfluxDB Dashboard
+![influxDBDashboard](https://github.com/Andreasss1/monitoring-dht22-esp32-influxdb-grafana-in-docker/blob/main/dashboard-InfluxDB.png)
 ### 2️⃣ Grafana Chart Preview
+![grafanaDashboard](https://github.com/Andreasss1/monitoring-dht22-esp32-influxdb-grafana-in-docker/blob/main/dashboard-Grafana.png)
 
 ---
 
